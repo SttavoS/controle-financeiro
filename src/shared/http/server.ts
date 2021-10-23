@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
+import 'express-async-errors';
 import applicationError from './middlewares/application.error';
 
 const server = express();
