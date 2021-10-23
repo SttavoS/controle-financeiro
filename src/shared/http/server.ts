@@ -1,7 +1,6 @@
 import 'dotenv/config';
 import 'reflect-metadata';
 import express from 'express';
-import 'express-async-errors';
 import cors from 'cors';
 import applicationError from './middlewares/application.error';
 import '@/shared/typeorm';
