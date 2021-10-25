@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { AppError } from '@/shared/errors/AppError';
-import { Request, Response } from 'express';
+import { NextFunction, Request, Response } from 'express';
 
 interface InternalServerError {
   status: string;
@@ -10,6 +11,7 @@ export default function applicationError(
   error: Error,
   request: Request,
   response: Response,
+  next: NextFunction,
 ): Response<AppError | InternalServerError> {
   if (error instanceof AppError) {
     return response.status(error.statusCode).json({
