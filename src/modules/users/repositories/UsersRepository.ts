@@ -13,7 +13,7 @@ export interface UserRecord {
 }
 
 export class UsersRepository {
-  queryBuilder: Knex;
+  private queryBuilder: Knex;
 
   constructor() {
     this.queryBuilder = connection;
